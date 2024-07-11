@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import trybeWarts from './images/download.png'
 import recipeApp from './images/image.png'
 import onlineStore from './images/onlineStore.png'
@@ -103,7 +103,8 @@ const Footer = () => (
       <a href="https://github.com/FelipeVergaraChico" target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faGithub} /> GitHub
       </a> |
-      <FontAwesomeIcon icon={faPhone} /> +55 (51) 98583-0985
+      <FontAwesomeIcon icon={faEnvelope} /> <a href="mailto:felipe.vergara.chico@gmail.com">felipe.vergara.chico@gmail.com</a> |
+      <FontAwesomeIcon icon={faPhone} /> +55 (51) 98583-0985 
     </p>
   </footer>
 );
