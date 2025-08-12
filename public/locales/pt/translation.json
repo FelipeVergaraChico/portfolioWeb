@@ -1,0 +1,88 @@
+{
+  "about": {
+    "title": "Sobre mim",
+    "description": "Desenvolvedor Full Stack com experiência em e-commerce e aplicações web. Atuo com metodologias ágeis (Scrum/Kanban), foco em segurança, comunicação clara e trabalho em equipe."
+  },
+  "experience": {
+    "title": "Experiência Profissional",
+    "blockchain_intern": {
+      "role": "Estagiário de Desenvolvimento Blockchain",
+      "company": "Serviço Federal de Processamento de Dados (Serpro)",
+      "date": "Fev/2025 – Atual",
+      "duties": [
+        "Desenvolvimento e manutenção de soluções usando tecnologias de blockchain.",
+        "Participação em sprints ágeis e integração com sistemas corporativos.",
+        "Uso de linguagens, frameworks e ferramentas voltadas para aplicações distribuídas e seguras."
+      ]
+    },
+    "frontend_intern": {
+      "role": "Estagiário de Desenvolvimento Front-End",
+      "company": "Way Anima Hub — Projeto Acadêmico",
+      "date": "Jul/2025 – Atual",
+      "duties": [
+        "Desenvolvimento de interface e componentes utilizando Vue.js.",
+        "Implementação de design responsivo e integração com APIs."
+      ]
+    }
+  },
+  "education": {
+    "title": "Formação Acadêmica",
+    "degree": "Bacharelado em Ciência da Computação",
+    "status": "Em andamento — Início: 2024"
+  },
+  "projects": {
+    "title": "Projetos",
+    "description": "Alguns trabalhos e estudos que refletem meu foco em qualidade, performance e boas práticas.",
+    "medicalService": {
+      "description": "Sistema de gestão de ordens de serviço desenvolvido com React (front-end) e Node.js + MongoDB (back-end). Permite criar, gerenciar e assinar ordens de serviço digitalmente através de um recurso de assinatura com canvas, além de exportá-las em PDF. A interface é totalmente responsiva, garantindo uma experiência fluida em qualquer dispositivo, com navegação intuitiva e fluxo de trabalho eficiente."
+    },
+    "facilitaServico": {
+      "description": "Facilita Serviços é uma plataforma web desenvolvida com Quasar Framework para conectar clientes e profissionais autônomos (self-employed) de diversas áreas, facilitando a contratação de serviços, agendamento, gerenciamento de perfis e comunicação via chat."
+    },
+    "blogAPI": {
+      "description": "API RESTful para blog com autenticação e relacionamentos."
+    },
+    "trybeSmithAPI": {
+      "description": "API de loja medieval com autenticação e CRUD de produtos."
+    },
+    "RegistraEmpregadoAPI": {
+      "description": "API simples para registro e gestão de empregados por departamento, desenvolvida como projeto acadêmico. Permite cadastrar, listar, atualizar e remover funcionários, associando-os a diferentes departamentos. O foco foi aplicar conceitos de desenvolvimento back-end, boas práticas de organização de código e consumo de dados de forma estruturada."
+    },
+    "recipesApp": {
+      "description": "Aplicativo de receitas desenvolvido com React e Context API, permitindo a busca, criação e compartilhamento de receitas."
+    },
+    "FacilitaServico": {
+      "description": "Facilita Serviços é uma plataforma web desenvolvida com Quasar Framework para conectar clientes e profissionais autônomos (self-employed) de diversas áreas, facilitando a contratação de serviços, agendamento, gerenciamento de perfis e comunicação via chat."
+    },
+    "buttonText": "Ver no GitHub"
+  },
+  "hero": {
+    "title": "Olá, eu sou o Felipe Vergara Chico",
+    "description": "Desenvolvedor Full Stack | Node.js, React, TypeScript, SQL, C#, ASP.NET, Docker, Linux",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "contact":{
+    "title": "Contato",
+    "description": "Vamos conversar? Me encontre nas redes ou envie uma mensagem pelo formulário.",
+    "form": {
+      "name": "Nome",
+      "namePlaceholder": "Seu nome",
+      "email": "E-mail",
+      "emailPlaceholder": "seu@email.com",
+      "message": "Mensagem",
+      "messagePlaceholder": "Escreva sua mensagem",
+      "success": "Mensagem enviada!",
+      "successDescription": "Obrigado pelo contato. Retornarei em breve.",
+      "error": "Erro ao enviar mensagem",
+      "errorDescription": "Por favor, tente novamente mais tarde ou entre em contato por outro meio.",
+      "sending": "Enviando...",
+      "submit": "Enviar mensagem"
+    },
+    "githubStats": "Estatísticas do Github"
+  },
+  "skills": {
+    "title": "Habilidades e Tecnologias",
+    "description": "Principais tecnologias e ferramentas que utilizo no dia a dia."
+  }
+}
