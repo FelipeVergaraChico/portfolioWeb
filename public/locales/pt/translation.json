@@ -33,6 +33,7 @@
   "projects": {
     "title": "Projetos",
     "description": "Alguns trabalhos e estudos que refletem meu foco em qualidade, performance e boas práticas.",
+    "featured": "Destaque",
     "medicalService": {
       "description": "Sistema de gestão de ordens de serviço desenvolvido com React (front-end) e Node.js + MongoDB (back-end). Permite criar, gerenciar e assinar ordens de serviço digitalmente através de um recurso de assinatura com canvas, além de exportá-las em PDF. A interface é totalmente responsiva, garantindo uma experiência fluida em qualquer dispositivo, com navegação intuitiva e fluxo de trabalho eficiente."
     },
@@ -41,6 +42,15 @@
     },
     "blogAPI": {
       "description": "API RESTful para blog com autenticação e relacionamentos."
+    },
+    "pingPresenca": {
+      "description": "Protótipo web para chamadas da faculdade do grupo Ânima. Professores geram códigos temporários de presença, alunos registram presença por código, e a autenticação SSO é feita com Keycloak."
+    },
+    "gestaoBackend": {
+      "description": "Backend Node.js + MongoDB para gestão financeira pessoal, com autenticação via Keycloak, categorias, despesas, rendas, itens recorrentes, períodos mensais, relatórios por categoria e análise financeira com IA."
+    },
+    "gestaoFront": {
+      "description": "App Flutter de gestão financeira pessoal integrado ao backend Node.js e ao Keycloak. Inclui dashboard mensal, controle de despesas e rendas, categorias personalizadas, recorrência, histórico de períodos, gráficos por categoria e interface Material Design 3 em português brasileiro."
     },
     "trybeSmithAPI": {
       "description": "API de loja medieval com autenticação e CRUD de produtos."
@@ -54,7 +64,8 @@
     "FacilitaServico": {
       "description": "Facilita Serviços é uma plataforma web desenvolvida com Quasar Framework para conectar clientes e profissionais autônomos (self-employed) de diversas áreas, facilitando a contratação de serviços, agendamento, gerenciamento de perfis e comunicação via chat."
     },
-    "buttonText": "Ver no GitHub"
+    "buttonText": "Ver no GitHub",
+    "downloadText": "Baixar APK"
   },
   "hero": {
     "title": "Olá, eu sou o Felipe Vergara Chico",

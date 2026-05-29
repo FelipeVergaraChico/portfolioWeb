@@ -33,11 +33,21 @@
   "projects": {
     "title": "Projects",
     "description": "Some works and studies that reflect my focus on quality, performance, and best practices.",
+    "featured": "Featured",
     "medicalService": {
       "description": "Service order management system developed with React (front-end) and Node.js + MongoDB (back-end). Allows creating, managing, and signing service orders digitally through a signature resource with canvas, in addition to exporting them as PDF. The interface is fully responsive, ensuring a smooth experience on any device, with intuitive navigation and efficient workflow."
     },
     "blogAPI": {
       "description": "API RESTful for blog with authentication and relationships."
+    },
+    "pingPresenca": {
+      "description": "Web prototype for the Ânima group college attendance system. Professors generate temporary attendance codes, students register attendance with those codes, and SSO authentication runs through Keycloak."
+    },
+    "gestaoBackend": {
+      "description": "Node.js + MongoDB backend for personal finance management, with Keycloak authentication, categories, expenses, income, recurrent items, monthly periods, category reports, and AI-powered financial analysis."
+    },
+    "gestaoFront": {
+      "description": "Flutter personal finance app integrated with the Node.js backend and Keycloak. It includes a monthly dashboard, expense and income tracking, custom categories, recurrence, period history, category charts, and a Material Design 3 interface localized for Brazilian Portuguese."
     },
     "trybeSmithAPI": {
       "description": "API for a medieval shop with authentication and product CRUD."
@@ -51,7 +61,8 @@
     "FacilitaServico": {
       "description": "Facilita Serviços is a web platform developed with Quasar Framework to connect clients and self-employed professionals from various fields, facilitating service hiring, scheduling, profile management, and chat communication."
     },
-    "buttonText": "View on GitHub"
+    "buttonText": "View on GitHub",
+    "downloadText": "Download APK"
   },
   "hero": {
     "title": "Hello, I'm Felipe Vergara Chico",
