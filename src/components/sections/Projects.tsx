@@ -4,7 +4,7 @@ import projectCover from "@/assets/project-cover.png";
 import facilitaServico from "@/assets/facilitaServico.png";
 import medicalService from "@/assets/medicalService.png";
 import { useTranslation } from "react-i18next";
-import { Download, Github } from "lucide-react";
+import { Download, ExternalLink, Github } from "lucide-react";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -15,6 +15,7 @@ type Project = {
   description: string;
   image: string;
   repoUrl: string;
+  siteUrl?: string;
   appUrl?: string;
 };
 
@@ -27,11 +28,20 @@ const Projects = () => {
 
   const projects: Project[] = [
     {
-      title: "Ping Presença",
-      techs: ["React 19", "TypeScript", "Keycloak", "Ant Design", "CoreUI", "Vite"],
-      description: t("projects.pingPresenca.description"),
+      title: "Pessegos em Setembro",
+      techs: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS", "Sanity", "Vercel"],
+      description: t("projects.blogPessegos.description"),
       image: projectCover,
-      repoUrl: "https://github.com/FelipeVergaraChico/ping-presenca",
+      repoUrl: "https://github.com/FelipeVergaraChico/blog-pessegos-em-setembro",
+      siteUrl: "https://pessegos-em-setembro.vercel.app/",
+    },
+    {
+      title: "Gestão Financeira App",
+      techs: ["Flutter", "Dart", "Material Design 3", "Keycloak", "Charts"],
+      description: t("projects.gestaoFront.description"),
+      image: projectCover,
+      repoUrl: "https://github.com/FelipeVergaraChico/gestao-front",
+      appUrl: "https://gestaodev.online/updates/app-latest.apk",
     },
     {
       title: "Gestão Financeira Backend",
@@ -41,12 +51,11 @@ const Projects = () => {
       repoUrl: "https://github.com/FelipeVergaraChico/gestao-backend",
     },
     {
-      title: "Gestão Financeira App",
-      techs: ["Flutter", "Dart", "Material Design 3", "Keycloak", "Charts"],
-      description: t("projects.gestaoFront.description"),
+      title: "Ping Presença",
+      techs: ["React 19", "TypeScript", "Keycloak", "Ant Design", "CoreUI", "Vite"],
+      description: t("projects.pingPresenca.description"),
       image: projectCover,
-      repoUrl: "https://github.com/FelipeVergaraChico/gestao-front",
-      appUrl: "https://gestaodev.online/updates/app-latest.apk",
+      repoUrl: "https://github.com/FelipeVergaraChico/ping-presenca",
     },
     {
       title: "RegistraEmpregadoAPI",
@@ -61,6 +70,7 @@ const Projects = () => {
       description: t("projects.FacilitaServico.description"),
       image: facilitaServico,
       repoUrl: "https://github.com/FelipeVergaraChico/FacilitaServico",
+      siteUrl: "https://facilita-servico.vercel.app/",
     },
     {
       title: "medical-service",
@@ -68,7 +78,7 @@ const Projects = () => {
       description: t("projects.medicalService.description"),
       image: medicalService,
       repoUrl: "https://github.com/FelipeVergaraChico/medical-service",
-    
+      siteUrl: "https://medical-service-red.vercel.app/",
     },
   ];
 
@@ -165,6 +175,14 @@ const Projects = () => {
                   <Button variant="hero" size="sm">
                     <Download className="mr-2 h-4 w-4" />
                     {t("projects.downloadText")}
+                  </Button>
+                </a>
+              )}
+              {p.siteUrl && (
+                <a href={p.siteUrl} target="_blank" rel="noreferrer">
+                  <Button variant="soft" size="sm">
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    {t("projects.siteText")}
                   </Button>
                 </a>
               )}

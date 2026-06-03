@@ -18,7 +18,7 @@
     "frontend_intern": {
       "role": "Front-End Development Intern",
       "company": "Way Anima Hub — Academic Project",
-      "date": "Jul/2025 – Present",
+      "date": "Jul/2025 – Dec/2025",
       "duties": [
         "Interface and component development using Vue.js.",
         "Implementation of responsive design and integration with APIs."
@@ -34,6 +34,9 @@
     "title": "Projects",
     "description": "Some works and studies that reflect my focus on quality, performance, and best practices.",
     "featured": "Featured",
+    "blogPessegos": {
+      "description": "Editorial blog built with Next.js App Router, TypeScript, Tailwind CSS, and Sanity Content Lake for Pessegos em Setembro. It delivers a comfortable reading experience with original visual identity, Sanity-published content, and simple serverless deployment."
+    },
     "medicalService": {
       "description": "Service order management system developed with React (front-end) and Node.js + MongoDB (back-end). Allows creating, managing, and signing service orders digitally through a signature resource with canvas, in addition to exporting them as PDF. The interface is fully responsive, ensuring a smooth experience on any device, with intuitive navigation and efficient workflow."
     },
@@ -62,6 +65,7 @@
       "description": "Facilita Serviços is a web platform developed with Quasar Framework to connect clients and self-employed professionals from various fields, facilitating service hiring, scheduling, profile management, and chat communication."
     },
     "buttonText": "View on GitHub",
+    "siteText": "Visit site",
     "downloadText": "Download APK"
   },
   "hero": {

@@ -18,7 +18,7 @@
     "frontend_intern": {
       "role": "Estagiário de Desenvolvimento Front-End",
       "company": "Way Anima Hub — Projeto Acadêmico",
-      "date": "Jul/2025 – Atual",
+      "date": "Jul/2025 – Dez/2025",
       "duties": [
         "Desenvolvimento de interface e componentes utilizando Vue.js.",
         "Implementação de design responsivo e integração com APIs."
@@ -34,6 +34,9 @@
     "title": "Projetos",
     "description": "Alguns trabalhos e estudos que refletem meu foco em qualidade, performance e boas práticas.",
     "featured": "Destaque",
+    "blogPessegos": {
+      "description": "Blog editorial construído com Next.js App Router, TypeScript, Tailwind CSS e Sanity Content Lake para o Pessegos em Setembro. Entrega uma experiência de leitura confortável com identidade visual autoral, conteúdo publicado pelo Sanity e deploy simples em ambiente serverless."
+    },
     "medicalService": {
       "description": "Sistema de gestão de ordens de serviço desenvolvido com React (front-end) e Node.js + MongoDB (back-end). Permite criar, gerenciar e assinar ordens de serviço digitalmente através de um recurso de assinatura com canvas, além de exportá-las em PDF. A interface é totalmente responsiva, garantindo uma experiência fluida em qualquer dispositivo, com navegação intuitiva e fluxo de trabalho eficiente."
     },
@@ -65,6 +68,7 @@
       "description": "Facilita Serviços é uma plataforma web desenvolvida com Quasar Framework para conectar clientes e profissionais autônomos (self-employed) de diversas áreas, facilitando a contratação de serviços, agendamento, gerenciamento de perfis e comunicação via chat."
     },
     "buttonText": "Ver no GitHub",
+    "siteText": "Acessar site",
     "downloadText": "Baixar APK"
   },
   "hero": {
