@@ -1,7 +1,27 @@
 {
   "about": {
+    "eyebrow": "Trajectory",
     "title": "About me",
-    "description": "Full Stack Developer with experience in e-commerce and web applications. I work with agile methodologies (Scrum/Kanban), focusing on security, clear communication, and teamwork."
+    "description": "Full Stack Developer with experience in web applications, product journeys, and real-world integrations. I work with agile methodologies, clear communication, and strong delivery quality.",
+    "summaryLabel": "How I work",
+    "summaryTitle": "I organize interfaces, APIs, and technical decisions to deliver products that feel clearer, safer, and easier to grow.",
+    "summaryDescription": "I am especially interested in well-resolved experiences, solid integrations, and frontends that communicate value with clarity. I like working end-to-end, from interface design to delivery consistency."
+  },
+  "credibility": {
+    "items": [
+      {
+        "title": "Product-oriented full stack delivery",
+        "description": "Hands-on work across frontend, backend, integration, and visual polish for products meant to be used in real scenarios."
+      },
+      {
+        "title": "Security, clarity, and solid technical foundations",
+        "description": "Experience with authentication, code organization, APIs, and decisions that prioritize consistency and maintainability."
+      },
+      {
+        "title": "Current experience in a professional environment",
+        "description": "Active experience in an agile corporate setting at Serpro, focused on secure solutions and efficient cross-team communication."
+      }
+    ]
   },
   "experience": {
     "title": "Professional Experience",
@@ -31,8 +51,9 @@
     "status": "In progress — Started: 2024"
   },
   "projects": {
+    "eyebrow": "Selected work",
     "title": "Projects",
-    "description": "Some works and studies that reflect my focus on quality, performance, and best practices.",
+    "description": "A curated set of projects that shows how I think about product, structure interfaces, and deliver complete experiences from frontend to backend.",
     "featured": "Featured",
     "blogPessegos": {
       "description": "Editorial blog built with Next.js App Router, TypeScript, Tailwind CSS, and Sanity Content Lake for Pessegos em Setembro. It delivers a comfortable reading experience with original visual identity, Sanity-published content, and simple serverless deployment."
@@ -69,14 +90,38 @@
     "downloadText": "Download APK"
   },
   "hero": {
+    "eyebrow": "Brazil · open to projects, internships, and technical collaboration",
     "title": "Hello, I'm Felipe Vergara Chico",
-    "description": "Full Stack Developer | Node.js, React, TypeScript, SQL, C#, ASP.NET, Docker, Linux",
+    "description": "Full Stack Developer focused on building reliable web products with strong visual clarity, consistent integrations, and real attention to the final user experience.",
+    "imageAlt": "Developer illustration in an abstract digital environment",
+    "asideLabel": "Positioning",
+    "asideTitle": "I turn ideas into interfaces and systems with structure to evolve.",
+    "asideDescription": "My focus is on delivering readable, functional, and sustainable products, connecting frontend, backend, and user experience in a single narrative.",
+    "highlights": [
+      {
+        "label": "Current focus",
+        "value": "Web products, authentication, integrations, and UI refinement"
+      },
+      {
+        "label": "Core stack",
+        "value": "Node.js, React, TypeScript, Flutter, SQL, C#, and ASP.NET"
+      },
+      {
+        "label": "Working mode",
+        "value": "End-to-end delivery with clarity, collaboration, and consistency"
+      }
+    ],
     "projects": "Projects",
     "contact": "Contact"
   },
   "contact": {
+    "eyebrow": "Contact",
     "title": "Contact",
-    "description": "Let's talk? Find me on social media or send a message through the form.",
+    "description": "If you want to talk about product, development, or an opportunity, this is the place to start.",
+    "cardLabel": "Let's build something solid",
+    "pitchTitle": "Open to discussing projects, internships, freelance work, and technical collaborations.",
+    "pitchDescription": "I prefer direct conversations with clear context and an execution mindset. If you already have an idea, a problem, or an initial scope, that is enough for us to start.",
+    "directLabel": "Direct contact",
     "form": {
       "name": "Name",
       "namePlaceholder": "Your name",
@@ -90,11 +135,33 @@
       "errorDescription": "Please try again later or contact me through another method.",
       "sending": "Sending...",
       "submit": "Send message"
-    },
-    "githubStats": "Github Stats"
+    }
   },
   "skills": {
+    "eyebrow": "Capabilities",
     "title": "Skills & Technologies",
-    "description": "Main technologies and tools I use on a daily basis."
+    "description": "Technologies grouped by delivery area to show where I create the strongest work today.",
+    "groups": {
+      "frontend": {
+        "label": "Frontend",
+        "title": "Interfaces built for clarity",
+        "description": "Modern, responsive, and well-structured interfaces for web products."
+      },
+      "backend": {
+        "label": "Backend",
+        "title": "Services, APIs, and persistence",
+        "description": "API design, business rules, authentication, and integration with databases and services."
+      },
+      "mobile": {
+        "label": "Mobile",
+        "title": "Apps and portable experiences",
+        "description": "Mobile applications with Flutter, utility-driven flows, and integration with existing backends."
+      },
+      "platform": {
+        "label": "Platform & tooling",
+        "title": "Delivery foundation and ecosystem",
+        "description": "Tools and platforms that support deployment, collaboration, authentication, and maintenance."
+      }
+    }
   }
 }

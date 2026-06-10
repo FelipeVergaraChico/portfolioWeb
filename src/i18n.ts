@@ -9,12 +9,20 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: "pt",
-    debug: true,
+    supportedLngs: ["pt", "en"],
+    nonExplicitSupportedLngs: true,
+    load: "languageOnly",
+    debug: false,
     interpolation: {
       escapeValue: false,
     },
     backend: {
-      loadPath: "/locales/{{lng}}/{{ns}}.json",
+      loadPath: (languages: string[], namespaces: string[]) => {
+        const language = languages[0]?.split("-")[0] ?? "pt";
+        const namespace = namespaces[0] ?? "translation";
+
+        return `/locales/${language}/${namespace}.json`;
+      },
     },
   });
 

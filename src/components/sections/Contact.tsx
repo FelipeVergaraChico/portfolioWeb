@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Github, Linkedin, Mail, Instagram } from "lucide-react";
+import { Github, Linkedin, Mail, Instagram, ArrowRight } from "lucide-react";
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { useTranslation } from "react-i18next";
@@ -55,65 +55,69 @@ const Contact = () => {
   };
 
   return (
-    <section id="contato" className="container py-20">
-      <header className="mb-8 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-3">{t("contact.title")}</h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto">
-          {t("contact.description")}
-        </p>
-      </header>
+    <section id="contato" className="section-shell relative">
+      <div className="section-divider" />
+      <div className="container">
+        <header className="section-heading mb-12">
+          <span className="eyebrow">{t("contact.eyebrow")}</span>
+          <h2 className="text-3xl font-semibold md:text-5xl">{t("contact.title")}</h2>
+          <p className="mt-4 max-w-2xl text-base leading-7 text-muted-foreground md:text-lg">
+            {t("contact.description")}
+          </p>
+        </header>
 
-      <div className="grid md:grid-cols-2 gap-10">
-        <div className="space-y-4">
-          <div className="flex flex-wrap gap-3">
-            <a href="https://github.com/FelipeVergaraChico" target="_blank" rel="noreferrer">
-              <Button variant="outline"><Github /> GitHub</Button>
-            </a>
-            <a href="https://www.linkedin.com/in/felipe-vergara-chico/" target="_blank" rel="noreferrer">
-              <Button variant="outline"><Linkedin /> LinkedIn</Button>
-            </a>
-            <a href="mailto:felipe.vergara.chico@gmail.com">
-              <Button variant="outline"><Mail /> E-mail</Button>
-            </a>
-            <a href="https://www.instagram.com/felipevergara_c/" target="_blank" rel="noreferrer">
-              <Button variant="outline"><Instagram /> Instagram</Button>
-            </a>
+        <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="premium-panel-dark p-6 md:p-8">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/65">
+              {t("contact.cardLabel")}
+            </p>
+            <p className="mt-4 max-w-md text-3xl font-semibold leading-tight text-white">
+              {t("contact.pitchTitle")}
+            </p>
+            <p className="mt-4 max-w-lg text-sm leading-7 text-white/72">
+              {t("contact.pitchDescription")}
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a href="https://github.com/FelipeVergaraChico" target="_blank" rel="noreferrer">
+                <Button variant="soft"><Github /> GitHub</Button>
+              </a>
+              <a href="https://www.linkedin.com/in/felipe-vergara-chico/" target="_blank" rel="noreferrer">
+                <Button variant="soft"><Linkedin /> LinkedIn</Button>
+              </a>
+              <a href="mailto:felipe.vergara.chico@gmail.com">
+                <Button variant="soft"><Mail /> E-mail</Button>
+              </a>
+              <a href="https://www.instagram.com/felipevergara_c/" target="_blank" rel="noreferrer">
+                <Button variant="soft"><Instagram /> Instagram</Button>
+              </a>
+            </div>
+            <div className="mt-8 rounded-[calc(var(--radius)-0.15rem)] border border-white/10 bg-white/5 p-5">
+              <p className="text-sm font-medium text-white">{t("contact.directLabel")}</p>
+              <a className="story-link mt-3 inline-flex items-center gap-2 text-sm text-white/78" href="mailto:felipe.vergara.chico@gmail.com">
+                felipe.vergara.chico@gmail.com
+                <ArrowRight className="h-4 w-4" />
+              </a>
+            </div>
           </div>
 
-          <div className="rounded-lg border p-4 space-y-4">
-            <h3 className="font-semibold">{t("contact.githubStats")}</h3>
-            <img
-              src="https://camo.githubusercontent.com/be7821b01ee1c249be499968e12447febdfde87e77da02666c35b0b8b7920f78/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67733f757365726e616d653d46656c69706556657267617261436869636f266c6f63616c653d656e26686964655f7469746c653d66616c7365266c61796f75743d636f6d7061637426636172645f77696474683d333230266c616e67735f636f756e743d35267468656d653d746f6b796f6e6967687426686964655f626f726465723d66616c7365266f726465723d32"
-              alt="Linguagens mais usadas de Felipe Vergara"
-              loading="lazy"
-              className="rounded-md border"
-            />
-            <img
-              src="https://camo.githubusercontent.com/239c33e5c230dd3e9823c16f608e8fd302bc4191ca571a6bb4a729b81f70fde4/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170693f757365726e616d653d46656c69706556657267617261436869636f26686964655f7469746c653d66616c736526686964655f72616e6b3d66616c73652673686f775f69636f6e733d7472756526696e636c7564655f616c6c5f636f6d6d6974733d7472756526636f756e745f707269766174653d747275652664697361626c655f616e696d6174696f6e733d66616c7365267468656d653d746f6b796f6e69676874266c6f63616c653d656e26686964655f626f726465723d66616c7365266f726465723d31"
-              alt="Gráfico de contribuições (streak) de Felipe Vergara"
-              loading="lazy"
-              className="rounded-md border"
-            />
-          </div>
+          <form ref={formRef} onSubmit={onSubmit} className="premium-panel space-y-5 p-6 md:p-8">
+            <div>
+              <label className="mb-1 block text-sm" htmlFor="name">{t("contact.form.name")}</label>
+              <Input id="name" name="name" required placeholder={t("contact.form.namePlaceholder")} />
+            </div>
+            <div>
+              <label className="mb-1 block text-sm" htmlFor="email">{t("contact.form.email")}</label>
+              <Input id="email" type="email" name="email" required placeholder={t("contact.form.emailPlaceholder")} />
+            </div>
+            <div>
+              <label className="mb-1 block text-sm" htmlFor="message">{t("contact.form.message")}</label>
+              <Textarea id="message" name="message" required placeholder={t("contact.form.messagePlaceholder")} rows={6} />
+            </div>
+            <Button variant="hero" size="lg" type="submit" disabled={isSubmitting}>
+              {isSubmitting ? t("contact.form.sending") : t("contact.form.submit")}
+            </Button>
+          </form>
         </div>
-
-        <form ref={formRef} onSubmit={onSubmit} className="space-y-4">
-          <div>
-            <label className="block text-sm mb-1" htmlFor="name">{t("contact.form.name")}</label>
-            <Input id="name" name="name" required placeholder={t("contact.form.namePlaceholder")} />
-          </div>
-          <div>
-            <label className="block text-sm mb-1" htmlFor="email">{t("contact.form.email")}</label>
-            <Input id="email" type="email" name="email" required placeholder={t("contact.form.emailPlaceholder")} />
-          </div>
-          <div>
-            <label className="block text-sm mb-1" htmlFor="message">{t("contact.form.message")}</label>
-            <Textarea id="message" name="message" required placeholder={t("contact.form.messagePlaceholder")} rows={6} />
-          </div>
-          <Button variant="hero" size="lg" type="submit" disabled={isSubmitting}>
-            {isSubmitting ? t("contact.form.sending") : t("contact.form.submit")}
-          </Button>
-        </form>
       </div>
     </section>
   );
