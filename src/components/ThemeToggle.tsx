@@ -27,14 +27,14 @@ const ThemeToggle = () => {
   const isDark = useMemo(() => theme === "dark", [theme]);
 
   return (
-    <div className="fixed top-4 right-4 z-50">
+    <div className="fixed right-4 top-4 z-50 md:right-6 md:top-6">
       <Button
         variant="soft"
         size="icon"
         aria-label={isDark ? "Alternar para tema claro" : "Alternar para tema escuro"}
         title={isDark ? "Tema: Escuro (clique para Claro)" : "Tema: Claro (clique para Escuro)"}
         onClick={() => setTheme((t) => (t === "dark" ? "light" : "dark"))}
-        className="transition-transform hover:scale-105"
+        className="border border-border/70 bg-background/70 shadow-[var(--shadow-glow)] backdrop-blur"
       >
         {isDark ? <Sun className="transition-transform" /> : <Moon className="transition-transform" />}
       </Button>
