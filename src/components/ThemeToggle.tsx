@@ -34,7 +34,7 @@ const ThemeToggle = () => {
         aria-label={isDark ? "Alternar para tema claro" : "Alternar para tema escuro"}
         title={isDark ? "Tema: Escuro (clique para Claro)" : "Tema: Claro (clique para Escuro)"}
         onClick={() => setTheme((t) => (t === "dark" ? "light" : "dark"))}
-        className="border border-border/70 bg-background/85 shadow-[var(--shadow-soft)] backdrop-blur"
+        className="border border-border/70 bg-background/70 shadow-[var(--shadow-glow)] backdrop-blur"
       >
         {isDark ? <Sun className="transition-transform" /> : <Moon className="transition-transform" />}
       </Button>

@@ -9,17 +9,17 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground shadow-[var(--shadow-soft)] hover:-translate-y-0.5 hover:bg-primary/92",
+        default: "bg-primary text-primary-foreground shadow-[var(--shadow-glow)] hover:-translate-y-0.5 hover:brightness-110",
         hero:
-          "bg-primary text-primary-foreground shadow-[var(--shadow-elegant)] hover:-translate-y-0.5 hover:shadow-[var(--shadow-glow)]",
+          "bg-[linear-gradient(90deg,hsl(var(--primary)),hsl(var(--accent)))] text-primary-foreground shadow-[var(--shadow-glow)] hover:-translate-y-0.5 hover:saturate-150",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
-          "border border-input bg-background/90 hover:-translate-y-0.5 hover:bg-secondary hover:text-secondary-foreground",
+          "border border-input bg-background/60 hover:-translate-y-0.5 hover:border-accent/60 hover:bg-secondary/70 hover:text-secondary-foreground",
         secondary:
-          "bg-secondary text-secondary-foreground hover:-translate-y-0.5 hover:bg-secondary/80",
+          "bg-secondary text-secondary-foreground hover:-translate-y-0.5 hover:brightness-105",
         soft:
-          "border border-border/80 bg-background/70 text-foreground shadow-none hover:-translate-y-0.5 hover:border-accent/40 hover:bg-background",
+          "border border-border/80 bg-background/45 text-foreground shadow-none hover:-translate-y-0.5 hover:border-primary/50 hover:bg-background/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
       },

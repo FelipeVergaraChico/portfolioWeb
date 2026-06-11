@@ -36,7 +36,7 @@ const Skills = () => {
         <div className="grid gap-6 lg:grid-cols-2">
           {skillGroups.map((group) => (
             <article key={group.key} className="premium-panel p-6 md:p-7">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">
+              <p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-accent">
                 {t(`skills.groups.${group.key}.label`)}
               </p>
               <h3 className="mt-3 text-2xl font-semibold text-foreground">
@@ -49,7 +49,7 @@ const Skills = () => {
                 {group.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="rounded-full border border-border/70 bg-background/72 px-3 py-1.5 text-sm font-medium text-foreground"
+                    className="rounded-full border border-border/70 bg-background/40 px-3 py-1.5 text-sm font-medium text-foreground"
                   >
                     {skill}
                   </span>

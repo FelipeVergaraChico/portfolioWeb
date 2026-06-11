@@ -24,13 +24,13 @@ const About = () => {
             </div>
             <div className="space-y-5">
               {(["blockchain_intern", "frontend_intern"] as const).map((item) => (
-                <div key={item} className="rounded-[calc(var(--radius)-0.3rem)] border border-border/70 bg-background/72 p-5">
+                <div key={item} className="rounded-[calc(var(--radius)-0.15rem)] border border-border/70 bg-background/60 p-5">
                   <div className="flex flex-col gap-2 md:flex-row md:items-start md:justify-between">
                     <div>
                       <p className="text-lg font-semibold text-foreground">{t(`experience.${item}.role`)}</p>
                       <p className="text-sm text-muted-foreground">{t(`experience.${item}.company`)}</p>
                     </div>
-                    <p className="text-sm font-medium text-muted-foreground">{t(`experience.${item}.date`)}</p>
+                    <p className="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-accent">{t(`experience.${item}.date`)}</p>
                   </div>
                   <ul className="mt-4 space-y-2 text-sm leading-6 text-muted-foreground">
                     {Array.from({ length: item === "blockchain_intern" ? 3 : 2 }).map((_, duty) => (
@@ -52,10 +52,10 @@ const About = () => {
                 <h3 className="text-xl font-semibold text-white md:text-2xl">{t("education.title")}</h3>
               </div>
               <p className="text-lg font-semibold text-white">{t("education.degree")}</p>
-              <p className="mt-2 text-sm leading-6 text-white/72">{t("education.status")}</p>
+              <p className="mt-2 text-sm leading-6 text-white/82">{t("education.status")}</p>
             </div>
             <div className="premium-panel p-6 md:p-8">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">
+              <p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-accent">
                 {t("about.summaryLabel")}
               </p>
               <p className="mt-4 text-xl font-semibold leading-tight text-foreground">

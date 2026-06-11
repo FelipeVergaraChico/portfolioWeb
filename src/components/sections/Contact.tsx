@@ -68,13 +68,13 @@ const Contact = () => {
 
         <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="premium-panel-dark p-6 md:p-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/65">
+            <p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-accent">
               {t("contact.cardLabel")}
             </p>
             <p className="mt-4 max-w-md text-3xl font-semibold leading-tight text-white">
               {t("contact.pitchTitle")}
             </p>
-            <p className="mt-4 max-w-lg text-sm leading-7 text-white/72">
+            <p className="mt-4 max-w-lg text-sm leading-7 text-white/84">
               {t("contact.pitchDescription")}
             </p>
             <div className="mt-6 flex flex-wrap gap-3">

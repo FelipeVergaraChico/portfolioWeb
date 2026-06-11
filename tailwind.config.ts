@@ -64,7 +64,7 @@ export default {
       },
       fontFamily: {
         sans: [
-          "Manrope",
+          "DM Sans",
           "ui-sans-serif",
           "system-ui",
           "Segoe UI",
@@ -74,6 +74,7 @@ export default {
           "Noto Sans",
         ],
         display: ["Sora", "ui-sans-serif", "system-ui"],
+        mono: ["Space Mono", "ui-monospace", "SFMono-Regular"],
       },
       borderRadius: {
         lg: "var(--radius)",

@@ -15,9 +15,14 @@ const CredibilityStrip = () => {
           return (
             <article
               key={index}
-              className="rounded-[calc(var(--radius)-0.35rem)] border border-border/70 bg-background/72 p-5"
+              className="rounded-[calc(var(--radius)-0.15rem)] border border-border/70 bg-background/60 p-5"
             >
-              <Icon className="mb-4 h-5 w-5 text-accent" />
+              <div className="mb-4 flex items-center justify-between">
+                <Icon className="h-5 w-5 text-accent" />
+                <span className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-muted-foreground">
+                  0{index + 1}
+                </span>
+              </div>
               <p className="mb-2 text-sm font-semibold text-foreground">
                 {t(`credibility.items.${index}.title`)}
               </p>
