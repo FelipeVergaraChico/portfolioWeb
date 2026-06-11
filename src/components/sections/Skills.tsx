@@ -35,7 +35,7 @@ const Skills = () => {
         </header>
         <div className="grid gap-6 lg:grid-cols-2">
           {skillGroups.map((group) => (
-            <article key={group.key} className="premium-panel p-6 md:p-7">
+            <article key={group.key} className="premium-panel flex h-full flex-col p-6 md:p-7">
               <p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-accent">
                 {t(`skills.groups.${group.key}.label`)}
               </p>
@@ -45,7 +45,7 @@ const Skills = () => {
               <p className="mt-3 text-sm leading-7 text-muted-foreground">
                 {t(`skills.groups.${group.key}.description`)}
               </p>
-              <div className="mt-5 flex flex-wrap gap-2.5">
+              <div className="mt-auto flex min-h-[6.5rem] flex-wrap content-start gap-2.5 pt-5">
                 {group.skills.map((skill) => (
                   <span
                     key={skill}

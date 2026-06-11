@@ -60,8 +60,8 @@ const Contact = () => {
       <div className="container">
         <header className="section-heading mb-12">
           <span className="eyebrow">{t("contact.eyebrow")}</span>
-          <h2 className="text-3xl font-semibold md:text-5xl">{t("contact.title")}</h2>
-          <p className="mt-4 max-w-2xl text-base leading-7 text-muted-foreground md:text-lg">
+          <h2 className="mx-auto w-fit text-3xl font-semibold text-balance md:text-5xl">{t("contact.title")}</h2>
+          <p className="mx-auto mt-4 max-w-[38rem] text-base leading-7 text-balance text-muted-foreground md:text-lg">
             {t("contact.description")}
           </p>
         </header>

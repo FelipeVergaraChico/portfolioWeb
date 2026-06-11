@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-illustration.png";
 import { useTranslation } from "react-i18next";
 import { useEffect, useRef } from "react";
-import { ArrowRight, MapPin, Sparkles } from "lucide-react";
+import { ArrowRight, MapPin } from "lucide-react";
 import gsap from "gsap";
 
 const Hero = () => {
@@ -77,10 +77,6 @@ const Hero = () => {
                 <span className="eyebrow">
                   <MapPin className="h-3.5 w-3.5" />
                   {t("hero.eyebrow")}
-                </span>
-                <span className="cyber-tag">
-                  <Sparkles className="h-3.5 w-3.5 text-accent" />
-                  experimental mode
                 </span>
               </div>
               <h1 className="max-w-3xl text-4xl font-semibold leading-[0.98] text-foreground md:text-6xl xl:text-7xl">

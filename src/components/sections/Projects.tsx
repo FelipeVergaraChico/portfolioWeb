@@ -175,11 +175,11 @@ const Projects = () => {
       ref={(el) => {
         if (el) cardRefs.current[index] = el;
       }}
-      className={`group premium-panel overflow-hidden border-border/70 bg-card/82 transition-all duration-300 hover:-translate-y-1 ${
+      className={`group premium-panel flex h-full flex-col overflow-hidden border-border/70 bg-card/82 transition-all duration-300 hover:-translate-y-1 ${
         options?.featured ? "hover:shadow-[var(--shadow-elegant)]" : "hover:shadow-[var(--shadow-soft)]"
       } ${options?.span ? "lg:col-span-2" : ""}`}
     >
-      <CardHeader className={`grid gap-5 p-4 md:items-start ${options?.span ? "md:grid-cols-[1.02fr_0.98fr] md:p-5" : "md:grid-cols-[0.82fr_1.18fr]"}`}>
+      <CardHeader className={`grid flex-1 gap-5 p-4 md:items-start ${options?.span ? "md:grid-cols-[1.02fr_0.98fr] md:p-5" : "md:grid-cols-[0.82fr_1.18fr]"}`}>
         <div
           className={`${options?.span ? "aspect-[4/3]" : "aspect-[16/10]"} overflow-hidden rounded-[calc(var(--radius)-0.25rem)] border p-3 md:p-4 ${toneClassMap[project.tone ?? "violet"]}`}
         >
@@ -190,8 +190,8 @@ const Projects = () => {
             className="h-full w-full rounded-[calc(var(--radius)-0.45rem)] object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
           />
         </div>
-        <div className="flex h-full flex-col justify-between gap-4">
-          <div>
+        <div className="flex h-full flex-col gap-4">
+          <div className="space-y-3">
             <div className="mb-3 flex items-start justify-between gap-3">
               <CardTitle className={`${options?.span ? "text-2xl md:text-3xl" : "text-xl"} max-w-[18ch] leading-[1.05]`}>{project.title}</CardTitle>
               {options?.featured && (
@@ -204,7 +204,7 @@ const Projects = () => {
               {project.description}
             </CardDescription>
           </div>
-          <div className="flex flex-wrap gap-2 pt-1">
+          <div className="mt-auto flex min-h-[4.75rem] flex-wrap content-start gap-2 pt-1">
             {project.techs.map((tech) => (
               <span key={tech} className="rounded-full border border-border/70 bg-background/70 px-3 py-1 text-xs font-medium text-muted-foreground">
                 {tech}
@@ -213,7 +213,7 @@ const Projects = () => {
           </div>
         </div>
       </CardHeader>
-      <CardFooter className="flex flex-wrap justify-end gap-2 border-t border-border/60 px-4 pb-4 pt-4 md:px-5 md:pb-5">
+      <CardFooter className="mt-auto flex flex-wrap justify-end gap-2 border-t border-border/60 px-4 pb-4 pt-4 md:px-5 md:pb-5">
         {renderActions(project, options?.primarySite)}
       </CardFooter>
     </Card>
