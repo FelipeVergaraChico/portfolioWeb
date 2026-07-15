@@ -4,6 +4,8 @@ import projectCover from "@/assets/project-cover.png";
 import facilitaServico from "@/assets/facilitaServico.png";
 import medicalService from "@/assets/medicalService.png";
 import pessegosEmSetembro from "@/assets/pessegosEmSetembro.jpeg";
+import gastrogourmet from "@/assets/gastrogourmet.png";
+import maxCatalog from "@/assets/maxCatalog.png";
 import { useTranslation } from "react-i18next";
 import { Download, ExternalLink, Github } from "lucide-react";
 import { useEffect, useRef } from "react";
@@ -15,10 +17,11 @@ type Project = {
   techs: string[];
   description: string;
   image: string;
-  repoUrl: string;
+  repoUrl?: string;
   siteUrl?: string;
   appUrl?: string;
   tone?: "violet" | "amber" | "teal";
+  imageFit?: "cover" | "contain";
 };
 
 gsap.registerPlugin(ScrollTrigger);
@@ -29,6 +32,24 @@ const Projects = () => {
   const cardRefs = useRef<HTMLDivElement[]>([]);
 
   const projects: Project[] = [
+    {
+      title: "GastroGourmet",
+      techs: ["React", "TypeScript", "NestJS", "Prisma", "PostgreSQL", "WhatsApp"],
+      description: t("projects.gastrogourmet.description"),
+      image: gastrogourmet,
+      siteUrl: "https://gastrogourmet.com.br/",
+      tone: "teal",
+      imageFit: "contain",
+    },
+    {
+      title: "Max Catálogos",
+      techs: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS", "SQLite", "Docker"],
+      description: t("projects.maxCatalog.description"),
+      image: maxCatalog,
+      siteUrl: "https://max-catalogos.com.br/",
+      tone: "amber",
+      imageFit: "contain",
+    },
     {
       title: "Pessegos em Setembro",
       techs: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS", "Sanity", "Vercel"],
@@ -151,12 +172,14 @@ const Projects = () => {
           </Button>
         </a>
       )}
-      <a href={project.repoUrl} target="_blank" rel="noreferrer" className="max-sm:flex-1">
-        <Button variant="outline" size="sm" className="w-full">
-          <Github className="mr-2 h-4 w-4" />
-          {t("projects.buttonText")}
-        </Button>
-      </a>
+      {project.repoUrl && (
+        <a href={project.repoUrl} target="_blank" rel="noreferrer" className="max-sm:flex-1">
+          <Button variant="outline" size="sm" className="w-full">
+            <Github className="mr-2 h-4 w-4" />
+            {t("projects.buttonText")}
+          </Button>
+        </a>
+      )}
     </>
   );
 
@@ -181,13 +204,15 @@ const Projects = () => {
     >
       <CardHeader className={`grid flex-1 gap-5 p-4 md:items-start ${options?.span ? "md:grid-cols-[1.02fr_0.98fr] md:p-5" : "md:grid-cols-[0.82fr_1.18fr]"}`}>
         <div
-          className={`${options?.span ? "aspect-[4/3]" : "aspect-[16/10]"} overflow-hidden rounded-[calc(var(--radius)-0.25rem)] border p-3 md:p-4 ${toneClassMap[project.tone ?? "violet"]}`}
+          className={`${options?.span ? "aspect-video" : "aspect-[16/10]"} overflow-hidden rounded-[calc(var(--radius)-0.25rem)] border p-3 md:p-4 ${toneClassMap[project.tone ?? "violet"]}`}
         >
           <img
             src={project.image}
             alt={`Capa do projeto ${project.title}`}
             loading="lazy"
-            className="h-full w-full rounded-[calc(var(--radius)-0.45rem)] object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+            className={`h-full w-full rounded-[calc(var(--radius)-0.45rem)] object-top transition-transform duration-500 group-hover:scale-[1.03] ${
+              project.imageFit === "contain" ? "object-contain" : "object-cover"
+            }`}
           />
         </div>
         <div className="flex h-full flex-col gap-4">
@@ -233,9 +258,7 @@ const Projects = () => {
 
         <div className="mt-8 grid gap-6 lg:grid-cols-2">
           {renderProjectCard(projects[0], 0, { featured: true, primarySite: true, span: true })}
-          {renderProjectCard(projects[1], 1, { featured: true })}
-          {renderProjectCard(projects[2], 2, { featured: true })}
-          {projects.slice(3).map((project, index) => renderProjectCard(project, index + 3))}
+          {projects.slice(1).map((project, index) => renderProjectCard(project, index + 1))}
         </div>
       </div>
     </section>

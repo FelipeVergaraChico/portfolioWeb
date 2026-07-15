@@ -55,6 +55,12 @@
     "title": "Projects",
     "description": "A curated set of projects that shows how I think about product, structure interfaces, and deliver complete experiences from frontend to backend.",
     "featured": "Featured",
+    "gastrogourmet": {
+      "description": "A restaurant SaaS platform that brings orders, menus, customers, expenses, and reports into one multi-store operation. It connects automated WhatsApp service to the staff dashboard, organizes the kitchen workflow on an operational board, and provides plan, user, and visual identity management for each business."
+    },
+    "maxCatalog": {
+      "description": "A complete digital catalog for MAX Elétrica & Construção, featuring a responsive public storefront, product and category search, and list creation for WhatsApp-assisted sales. It includes a secure dashboard for managing products, images, categories, display order, and staff access with different permission levels."
+    },
     "blogPessegos": {
       "description": "Editorial blog built with Next.js App Router, TypeScript, Tailwind CSS, and Sanity Content Lake for Pessegos em Setembro. It delivers a comfortable reading experience with original visual identity, Sanity-published content, and simple serverless deployment."
     },
