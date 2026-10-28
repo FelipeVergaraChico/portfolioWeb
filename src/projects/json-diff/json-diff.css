@@ -1,0 +1,517 @@
+.jd-page {
+  min-height: 100dvh;
+  background: var(--paper);
+  color: var(--ink);
+}
+.jd-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 22px max(4vw, 20px);
+  border-bottom: 1px solid var(--line);
+}
+.jd-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font: 600 12px var(--display);
+  letter-spacing: 2px;
+  color: var(--blue);
+}
+.jd-main {
+  max-width: 1440px;
+  margin: auto;
+  padding: 55px max(4vw, 20px) 60px;
+}
+.jd-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+.jd-intro .eyebrow {
+  margin-bottom: 18px;
+  font-size: 10px;
+}
+.jd-intro h1 {
+  font-size: 64px;
+  letter-spacing: -4px;
+  line-height: 1;
+}
+.jd-intro h1 span {
+  color: var(--blue);
+  font-family: Georgia, serif;
+  font-style: italic;
+}
+.jd-intro h2 {
+  font-size: 23px;
+  letter-spacing: -0.6px;
+  margin: 20px 0 10px;
+}
+.jd-intro > div > p:last-child {
+  max-width: 580px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+.jd-intro aside {
+  display: flex;
+  gap: 15px;
+  max-width: 290px;
+  border-left: 2px solid var(--blue);
+  padding-left: 20px;
+  color: var(--blue);
+}
+.jd-intro aside p {
+  font-size: 12px;
+  line-height: 1.8;
+}
+.jd-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 14px;
+}
+.jd-toolbar p {
+  font-size: 10px;
+  color: var(--muted);
+}
+.jd-toolbar > div {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.jd-page button {
+  color: inherit;
+}
+.jd-toolbar button,
+.jd-editor-heading button {
+  display: inline-flex;
+  gap: 7px;
+  align-items: center;
+  border: 0;
+  background: none;
+  font-size: 11px;
+  padding: 6px 0;
+}
+.jd-toolbar button:hover,
+.jd-editor-heading button:hover {
+  color: var(--blue);
+  text-decoration: underline;
+}
+.jd-editors {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.jd-editor {
+  border: 1px solid #bcbab0;
+  background: #faf8f2;
+  min-width: 0;
+}
+.jd-editor-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--line);
+  background: #e9e5dc;
+  flex-wrap: wrap;
+}
+.jd-editor-heading > label {
+  font: 500 13px var(--display);
+}
+.jd-editor-heading > label::before {
+  content: attr(data-index);
+  font-size: 10px;
+  color: var(--muted);
+  margin-right: 12px;
+}
+.jd-editor-heading > div {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.jd-upload {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  cursor: pointer;
+}
+.jd-upload:focus-within {
+  outline: 3px solid var(--blue);
+  outline-offset: 5px;
+}
+.jd-upload input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.jd-editor textarea {
+  display: block;
+  width: 100%;
+  min-height: 340px;
+  resize: vertical;
+  padding: 22px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  font:
+    13px/1.8 ui-monospace,
+    SFMono-Regular,
+    Consolas,
+    monospace;
+  tab-size: 2;
+}
+.jd-editor textarea:focus-visible {
+  outline-offset: -3px;
+}
+.jd-editor textarea[aria-invalid="true"] {
+  box-shadow: inset 3px 0 #b52e34;
+}
+.jd-editor-foot {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px 18px;
+  border-top: 1px solid var(--line);
+  font-size: 10px;
+  min-height: 38px;
+}
+.jd-editor-foot > span {
+  white-space: nowrap;
+  color: var(--muted);
+}
+.jd-editor-foot > p {
+  color: #a0272c;
+  line-height: 1.6;
+}
+.jd-compare-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 22px 0 35px;
+}
+.jd-compare-row > div {
+  max-width: 700px;
+}
+.jd-compare-row p {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+.jd-page .primary {
+  color: white;
+  white-space: nowrap;
+}
+.jd-results {
+  border-top: 1px solid var(--line);
+  padding-top: 32px;
+}
+.jd-empty {
+  text-align: center;
+  padding: 40px 20px;
+  border: 1px dashed #bcbab0;
+}
+.jd-empty > svg {
+  color: var(--blue);
+  margin-bottom: 14px;
+}
+.jd-empty h2 {
+  font-size: 24px;
+  letter-spacing: -0.7px;
+}
+.jd-empty p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--muted);
+  max-width: 500px;
+  margin: 12px auto 0;
+}
+.jd-result-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+.jd-result-heading .eyebrow {
+  font-size: 10px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.jd-result-heading h2 {
+  font-size: 28px;
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+.jd-result-heading .button {
+  padding: 12px 16px;
+  min-height: 42px;
+  font-size: 11px;
+}
+.jd-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid var(--line);
+  margin-bottom: 26px;
+}
+.jd-stat {
+  padding: 20px;
+  border-right: 1px solid var(--line);
+  border-top: 3px solid #a7a69c;
+}
+.jd-stat:last-child {
+  border-right: 0;
+}
+.jd-stat strong {
+  display: block;
+  font: 32px var(--display);
+  margin-bottom: 5px;
+}
+.jd-stat span {
+  font-size: 11px;
+  color: var(--muted);
+}
+.jd-stat.added {
+  border-top-color: #2448d8;
+}
+.jd-stat.removed {
+  border-top-color: #b52e34;
+}
+.jd-stat.changed {
+  border-top-color: #a65b14;
+}
+.jd-filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+.jd-filters button,
+.jd-pagination button {
+  border: 1px solid var(--line);
+  background: transparent;
+  padding: 8px 12px;
+  font-size: 11px;
+}
+.jd-filters button[aria-pressed="true"] {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+.jd-difference {
+  border: 1px solid var(--line);
+  margin-bottom: 14px;
+  min-width: 0;
+}
+.jd-difference > header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 16px;
+  background: #e9e5dc;
+  flex-wrap: wrap;
+}
+.jd-kind {
+  font: 11px var(--display);
+  font-weight: 600;
+  min-width: 105px;
+}
+.jd-difference > header code {
+  font-size: 12px;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.jd-values {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.jd-values > div {
+  min-width: 0;
+  padding: 14px 16px;
+}
+.jd-values > div:first-child {
+  border-right: 1px solid var(--line);
+}
+.jd-values > div > span {
+  display: block;
+  color: var(--muted);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.jd-values pre {
+  margin: 0;
+  font:
+    12px/1.7 ui-monospace,
+    SFMono-Regular,
+    Consolas,
+    monospace;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  max-height: 280px;
+  overflow: auto;
+}
+.jd-difference.added .jd-kind {
+  color: #2448d8;
+}
+.jd-difference.removed .jd-kind {
+  color: #a0272c;
+}
+.jd-difference.changed .jd-kind {
+  color: #8c4b0e;
+}
+.jd-difference.added .jd-values > div:last-child {
+  background: #e1e8ff;
+}
+.jd-difference.removed .jd-values > div:first-child {
+  background: #f7dfe0;
+}
+.jd-difference.changed .jd-values > div:first-child {
+  background: #f7e7da;
+}
+.jd-difference.changed .jd-values > div:last-child {
+  background: #e1e8ff;
+}
+.jd-difference.unchanged .jd-values {
+  background: #f8f5ee;
+}
+.jd-no-results {
+  font-size: 13px;
+  color: var(--muted);
+  padding: 25px 0;
+}
+.jd-pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  margin-top: 22px;
+  font-size: 11px;
+}
+.jd-pagination button:disabled {
+  cursor: default;
+  opacity: 0.4;
+}
+.jd-footer {
+  max-width: 1440px;
+  margin: auto;
+  padding: 25px max(4vw, 20px);
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  font: 10px var(--display);
+  color: var(--muted);
+}
+@media (max-width: 760px) {
+  .jd-header {
+    padding: 18px 20px;
+  }
+  .jd-header > .text-link {
+    font-size: 10px;
+    gap: 7px;
+  }
+  .jd-brand {
+    display: none;
+  }
+  .jd-main {
+    padding-top: 35px;
+  }
+  .jd-intro {
+    display: block;
+    margin-bottom: 28px;
+  }
+  .jd-intro h1 {
+    font-size: 56px;
+  }
+  .jd-intro aside {
+    max-width: 100%;
+    margin-top: 22px;
+  }
+  .jd-intro aside p {
+    font-size: 11px;
+  }
+  .jd-toolbar {
+    display: block;
+  }
+  .jd-toolbar > div {
+    margin-top: 12px;
+    gap: 20px;
+  }
+  .jd-editors {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .jd-editor textarea {
+    min-height: 220px;
+    font-size: 12px;
+    padding: 16px;
+  }
+  .jd-editor-heading {
+    padding: 12px;
+  }
+  .jd-editor-heading > label {
+    font-size: 12px;
+  }
+  .jd-editor-heading > div {
+    gap: 12px;
+  }
+  .jd-compare-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+  }
+  .jd-result-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .jd-result-heading h2 {
+    font-size: 25px;
+  }
+  .jd-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .jd-stat:nth-child(2) {
+    border-right: 0;
+  }
+  .jd-stat {
+    padding: 15px;
+  }
+  .jd-stat strong {
+    font-size: 28px;
+  }
+  .jd-values {
+    grid-template-columns: 1fr;
+  }
+  .jd-values > div:first-child {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .jd-difference > header {
+    gap: 8px;
+  }
+  .jd-difference > header code {
+    width: 100%;
+  }
+  .jd-pagination {
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .jd-footer {
+    gap: 20px;
+    font-size: 9px;
+  }
+}

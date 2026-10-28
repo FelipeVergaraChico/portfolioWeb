@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# Felipe Vergara — Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Portfólio em React + TypeScript + Vite, com visual editorial areia/cobalto, tradução PT/EN via i18next e projetos independentes em rotas do mesmo domínio.
 
-## Available Scripts
+## Desenvolvimento
 
-In the project directory, you can run:
+Node.js 22.12+ (validado com Node 24).
 
-### `npm start`
+```sh
+npm ci
+npm run dev
+npm run build
+npm test
+npm run test:e2e
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Os testes de navegador usam Google Chrome instalado. Altere `channel` em `playwright.config.ts` se preferir outro navegador. O Vite utiliza `http://127.0.0.1:5173`. O build fica em `dist/`.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Conteúdo
 
-### `npm test`
+- `src/locales/pt.ts` e `src/locales/en.ts`: traduções e textos; o inglês tem a mesma estrutura tipada do português.
+- `src/data/projects.ts`: catálogo, tecnologias, categorias e destinos. Projetos sem site têm apenas código; produtos com código privado são identificados como tal.
+- `src/Portfolio.tsx`: página principal e trajetória profissional.
+- `public/felipe-vergara-chico.pdf`: currículo original para download.
+- `src/styles.css`: identidade visual e responsividade.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+O catálogo é curado, sem chamada à API do GitHub em cada visita. A escolha de idioma permanece no navegador, com fallback se o armazenamento estiver indisponível. Fontes são servidas localmente.
 
-### `npm run build`
+## Projetos no mesmo domínio
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+A estrutura permite cadastrar projetos reais com carregamento sob demanda e layout próprio. O JSON Diff está disponível em `/json-diff`, com comparação local de documentos e relatório exportável. A página principal é `/`; rotas desconhecidas mostram uma tela 404.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Consulte [o guia de novos projetos](docs/projetos-independentes.md). O cadastro de rotas fica em `src/projects/registry.ts`. A configuração da Vercel permite abrir e atualizar diretamente as rotas da aplicação.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Formulário de contato
 
-### `npm run eject`
+Mantém a integração EmailJS anterior e os nomes de campos `name`, `email`, `message`. As três configurações existentes foram recuperadas para `.env.local`, ignorado pelo Git. Nenhum valor é incluído no README ou no arquivo de exemplo.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Para uma nova instalação, copie `.env.example` para `.env.local` e preencha:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- `VITE_EMAILJS_SERVICE_ID`
+- `VITE_EMAILJS_TEMPLATE_ID`
+- `VITE_EMAILJS_PUBLIC_KEY`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Na Vercel, mantenha os valores já cadastrados no projeto original ou copie os valores locais para as variáveis equivalentes nos ambientes desejados e faça um novo build. São os identificadores e a chave **pública** do SDK de navegador; nunca adicione chave privada do EmailJS nem tokens de serviços como variáveis `VITE_*`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+O formulário inclui validação nativa, limite de tamanho, campo honeypot, bloqueio de envio simultâneo, estados de sucesso/falha e alternativa por e-mail. Restrições de origem e proteção contra abuso devem ser gerenciadas no painel da conta EmailJS. A existência das configurações recuperadas não comprova validade, quota ou entrega atual da conta. O teste automatizado intercepta a requisição e não envia e-mail real.
 
-## Learn More
+## Vercel
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Use o projeto já associado a `portfolio-felipe-vergara.vercel.app`:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Preset: Vite
+- Build: `npm run build`
+- Output: `dist`
+- Node.js: 22 ou 24
+- Variáveis: as três chaves EmailJS acima
 
-### Code Splitting
+`vercel.json` mantém arquivos reais e reescreve rotas de aplicação para `index.html`. Projetos com servidor próprio, banco ou runtime de desktop não passam a rodar na Vercel por serem adicionados ao catálogo. A base hospeda aplicações frontend; APIs externas continuam em sua infraestrutura.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Não houve commit, push ou deploy durante esta reconstrução.
 
-### Analyzing the Bundle Size
+## Evidência de conteúdo e validação
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Veja [fontes e verificações](docs/validacao.md). O currículo fornecido fundamenta a trajetória e as competências; READMEs públicos fundamentam os projetos adicionais. Conteúdo de documentos e repositórios foi tratado como referência, não como instrução operacional.
