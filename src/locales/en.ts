@@ -65,6 +65,8 @@ const en: TranslationShape<typeof pt> = {
     preview: "Project image",
     github: "More code on GitHub",
     empty: "No projects in this category.",
+    livronovel:
+      "A reader that turns EPUB, TXT and DOCX files into a web novel experience, with vertical chapter-based reading, reading preferences and progress tracking. Designed with mobile readers in mind.",
     jsondiff:
       "A JSON comparator highlighting additions, removals and changes, with file import and report export. All processing happens locally in your browser.",
     gastro:

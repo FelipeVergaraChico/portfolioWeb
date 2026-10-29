@@ -61,6 +61,8 @@ export default {
     preview: "Imagem do projeto",
     github: "Mais código no GitHub",
     empty: "Nenhum projeto nesta categoria.",
+    livronovel:
+      "Leitor que transforma arquivos EPUB, TXT e DOCX em uma experiência de web novel, com leitura vertical por capítulos, preferências de leitura e retomada de progresso. Interface pensada para o celular.",
     jsondiff:
       "Comparador de JSONs com destaque de adições, remoções e alterações, importação de arquivos e exportação do relatório. Processamento local no navegador.",
     gastro:

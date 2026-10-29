@@ -12,6 +12,7 @@ import {
   Braces,
   Smartphone,
   Gamepad2,
+  BookOpen,
 } from "lucide-react";
 import { projects, type Category, type Project } from "../data/projects";
 export function ProjectArt({ project }: { project: Project }) {
@@ -29,19 +30,21 @@ export function ProjectArt({ project }: { project: Project }) {
       </div>
     );
   const Icon =
-    project.art === "iniciapp"
-      ? Smartphone
-      : project.art === "dots"
-        ? Gamepad2
-        : project.art === "gov" || project.art === "jsondiff"
-          ? Braces
-          : project.art === "stack"
-            ? Terminal
-            : project.art === "ping"
-              ? Fingerprint
-              : project.art === "medical"
-                ? Activity
-                : Layers;
+    project.art === "livronovel"
+      ? BookOpen
+      : project.art === "iniciapp"
+        ? Smartphone
+        : project.art === "dots"
+          ? Gamepad2
+          : project.art === "gov" || project.art === "jsondiff"
+            ? Braces
+            : project.art === "stack"
+              ? Terminal
+              : project.art === "ping"
+                ? Fingerprint
+                : project.art === "medical"
+                  ? Activity
+                  : Layers;
   return (
     <div className={"project-art art-" + project.art} aria-hidden="true">
       <div className="art-grid" />
@@ -51,15 +54,17 @@ export function ProjectArt({ project }: { project: Project }) {
       <Icon className="art-icon" strokeWidth={1} />
       <strong>{project.title}</strong>
       <span className="art-code">
-        {project.art === "jsondiff"
-          ? "before → after"
-          : project.art === "gov"
-            ? "documentation → context → code"
-            : project.art === "stack"
-              ? "localhost: everything"
-              : project.art === "ping"
-                ? "presença. registrada."
-                : '{ ideas: "implemented" }'}
+        {project.art === "livronovel"
+          ? "EPUB / TXT / DOCX"
+          : project.art === "jsondiff"
+            ? "before → after"
+            : project.art === "gov"
+              ? "documentation → context → code"
+              : project.art === "stack"
+                ? "localhost: everything"
+                : project.art === "ping"
+                  ? "presença. registrada."
+                  : '{ ideas: "implemented" }'}
       </span>
       <span className="art-corner">↗</span>
     </div>

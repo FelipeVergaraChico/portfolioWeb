@@ -29,6 +29,16 @@ export const projects: Project[] = [
     art: "jsondiff",
   },
   {
+    id: "livronovel",
+    title: "LivroNovel",
+    category: "web",
+    tech: ["Vue 3", "TypeScript", "Node.js", "PostgreSQL"],
+    repositories: [repo("livro-novel")],
+    site: "https://livro-novel.vercel.app/",
+    status: "public",
+    art: "livronovel",
+  },
+  {
     id: "gastro",
     title: "GastroGourmet",
     category: "web",

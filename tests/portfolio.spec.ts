@@ -21,7 +21,7 @@ test("language, filtering and additional projects", async ({ page }) => {
   await expect(page.locator(".project-card")).toContainText("Dots and Boxes");
   await page.getByRole("button", { name: "Todos", exact: true }).click();
   await page.getByRole("button", { name: "Ver mais projetos" }).click();
-  await expect(page.locator(".project-card")).toHaveCount(13);
+  await expect(page.locator(".project-card")).toHaveCount(14);
   await page.getByRole("button", { name: "EN", exact: true }).click();
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
     "Ideas on paper",
